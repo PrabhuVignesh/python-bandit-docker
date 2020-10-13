@@ -1,4 +1,7 @@
-FROM python
+FROM python:alpine
 
 RUN pip3 install bandit
-CMD ["bandit"]
+
+WORKDIR /code
+
+ENTRYPOINT ["/bin/bash"]
